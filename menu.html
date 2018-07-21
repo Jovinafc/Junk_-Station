@@ -1,0 +1,288 @@
+<!Doctype html>
+<html>---
+<head>
+
+<?php
+
+
+
+?>
+<link rel="stylesheet" href="fastfood.css">
+<title> Menu </title>
+<link href="css/dialog.css" rel="stylesheet"> <!-- Including CSS File Here-->
+
+<script type='text/javascript' src='jquery-3.2.1.min'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script type="text/javascript" src="dialog.js"></script>
+
+ 
+ <script type="text/javascript">
+
+ function pizza(){
+  document.getElementById("pizza_category").style.display="block";
+  document.getElementById("burger_category").style.display="none";
+  document.getElementById("fries_category").style.display="none";
+  document.getElementById("desserts_category").style.display="none";
+  document.getElementById("drinks_category").style.display="none";
+  
+ }
+ 
+ function burgers(){
+  document.getElementById("pizza_category").style.display="none";
+  document.getElementById("burger_category").style.display="block";
+  document.getElementById("fries_category").style.display="none";
+  document.getElementById("desserts_category").style.display="none";
+  document.getElementById("drinks_category").style.display="none";
+  
+ }
+ 
+ function fries(){
+  document.getElementById("pizza_category").style.display="none";
+  document.getElementById("burger_category").style.display="none";
+  document.getElementById("fries_category").style.display="block";
+  document.getElementById("desserts_category").style.display="none";
+  document.getElementById("drinks_category").style.display="none";
+  
+ }
+ 
+ function desserts(){
+  document.getElementById("pizza_category").style.display="none";
+  document.getElementById("burger_category").style.display="none";
+  document.getElementById("fries_category").style.display="none";
+  document.getElementById("desserts_category").style.display="block";
+  document.getElementById("drinks_category").style.display="none";
+  
+ }
+ function drinks(){
+  document.getElementById("pizza_category").style.display="none";
+  document.getElementById("burger_category").style.display="none";
+  document.getElementById("fries_category").style.display="none";
+  document.getElementById("desserts_category").style.display="none";
+  document.getElementById("drinks_category").style.display="block";
+  
+ }
+ 
+ function addtocart(){
+ 
+ }
+/*
+ (function() {
+  var updateButton = document.getElementById('updateDetails');
+  var cancelButton = document.getElementById('cancel');
+  var favDialog = document.getElementById('favDialog');
+
+  // Update button opens a modal dialog
+  updateButton.addEventListener('click', function() {
+    favDialog.showModal();
+  });
+
+  // Form cancel button closes the dialog box
+  cancelButton.addEventListener('click', function() {
+    favDialog.close();
+  });
+})();
+
+*/	
+
+var dialog =document.querySelector('Favdialog');
+document.querySelector('#updateDetails').onclick = function(){
+dialog.show();
+};
+document.querySelector('#cancel').onclick = function(){
+dialog.close();
+};
+	
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="header"> 
+<h4 class="thejunk" >THE <span class="span1">JUNK</span></h4>
+<h1 class="station"><span class="span2">STATION</span></h1>
+</div>
+
+<div id="nav">
+<ul>
+    <li><a class="home" href="fastfood.html"> HOME </a></li>
+	<li><a class="Menu" href="menu.html"> MENU </a></li>
+	<li><a class="aboutus" href="about.html"> ABOUT US</a> </li>
+	<li><a class="contact" href="contact.html"> CONTACT</a> </li> 	
+
+</ul>
+</div>
+<div id="categories">
+<h2 class="categories" onClick="pizza()">PIZZA </h2> &nbsp; 
+<h2 class="categories"><a onClick="burgers()">BURGERS </a></h2> &nbsp;
+<h2 class="categories"><a onClick="fries()"> FRIES </a></h2>    &nbsp;
+<h2 class="categories"><a onClick="desserts()">DESSERTS </a></h2>  &nbsp;
+<h2 class="categories"><a onClick="drinks()">DRINKS </a></h2>  &nbsp;
+
+</div>
+
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="qty">Quantity:</label>
+      <select id="qty">
+       
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+		<option>4</option>
+        <option>5</option>
+        <option>6</option>
+      
+	   </select></p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
+
+<div id="pizza_category">
+<div id="con1" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="chicken_barbeque.jpg"><br><h4> CHICKEN BARBEQUE PIZZA </h4> 
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="qty">Quantity:</label>
+      <select id="qty">
+       
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+		<option>4</option>
+        <option>5</option>
+        <option>6</option>
+      
+	   </select></p>
+    </section>
+    <menu>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </menu>
+  </form>
+</dialog>
+ <button   id=" updateDetails" class="buttons"> ADD TO CART </button></div> 
+<div id="con2" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_garlic.jpg"><br><h4> CHICKEN GARLIC PIZZA </h4>  <button id="updateDetails" class="buttons" > ADD TO CART </button> </div> 
+<div id="con3" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_grilled.jpg"><br><h4> CHICKEN GRILLED PIZZA </h4>  <button id=" updateDetails"  class="buttons"> ADD TO CART </button> </div> 
+<br>
+<br>
+<br>
+
+<div id="con4" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="chicken_tikka.jpg"><br><h4> CHICKEN TIKKA PIZZA </h4>  <button id=" updateDetails" class="buttons"> ADD TO CART </button> </div> 
+<div id="con5" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_sausage.jpg"><br><h4> CHICKEN SAUSAGE PIZZA </h4> <button id=" updateDetails"  class="buttons"> ADD TO CART </button>  </div> 
+<div id="con6" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_pizza.jpg"><br><h4> VEGETABLE PIZZA </h4> <button id=" updateDetails" class="buttons"> ADD TO CART </button>  </div> 
+
+<br>
+<br>
+<br>
+
+<div id="con7" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="veg_paneer_pizza.jpg"><br><h4> VEG PANEER PIZZA </h4> <button id="buttons" class="buttons"> ADD TO CART </button>  </div> 
+<div id="con8" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_corn_pizza.jpg"><br><h4> VEG CORN PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con9" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_cheese_pizza.jpg"><br><h4> VEG CHEESE PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+</div>
+
+<div id= "burger_category" style="display:none;">
+<div id="con1" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="chicken_snacker_burger.jpg"><br><h4> CHICKEN SNACKER </h4>  <button class="buttons"> ADD TO CART </button></div> 
+<div id="con2" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="big_mac_buggers.jpg"><br><h4> BIG MAC </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con3" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="mc_aloo_tikki_burger.jpg"><br><h4> MC'Aloo TIKKI  </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<br>
+<br>
+<br>
+
+<div id="con4" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="spicy_masala_veggie_burger.jpg"><br><h4> SPICY MASALA VEGGIE </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con5" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="grilled_chicken_burger.jpg"><br><h4> GRILLED CHICKEN</h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con6" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_maharaja.jpg"><br><h4> CHICKEN MAHARAJA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+<br>
+<br>
+<br>
+
+<div id="con7" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="garlic_white_burger.jpg"><br><h4> GARLIC WHITE CHEDDAR</h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con8" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="cheese_burger.jpg"><br><h4> CHEESE BURGER </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con9" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="egg_burger.jpg"><br><h4> EGG BURGER </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+
+</div>
+
+
+<div id= "fries_category" style="display:none;">
+<div id="con1" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="curly_fries.webp"><br><h4> CURLY FRIES </h4>  <button class="buttons"> ADD TO CART </button></div> 
+<div id="con2" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="french_fries.jpg"><br><h4> FRENCH FRIES </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con3" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="waffle_fries.webp"><br><h4> WAFFLE FRIES</h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<br>
+<br>
+<br>
+
+<div id="con4" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="shoestring_fries.webp"><br><h4> SHOESTRING FRIES </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con5" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="potato_wedges.webp"><br><h4> POTATO WEDGES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con6" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chilli_cheese_fries.webp"><br><h4> CHILLI CHEESE FRIES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+<br>
+<br>
+<br>
+
+<div id="con7" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="zucchini_fries.webp"><br><h4> ZUCCHINI FRIES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con8" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="polenta_fries.webp"><br><h4> POLENTA FRIES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con9" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="crinky_cut_fries.webp"><br><h4> CRINKY CUT FRIES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+
+</div>
+
+
+<div id= "desserts_category" style="display:none;">
+<div id="con1" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="choco_pie.jpg"><br><h4> CHOCOLATE PIE </h4>  <button class="buttons"> ADD TO CART </button></div> 
+<div id="con2" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="sticky_date.jpg"><br><h4> STICKY DATE PUDDING </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con3" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="napolean_dessert.jpg"><br><h4> NAPOLEAN </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<br>
+<br>
+<br>
+
+<div id="con4" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="apple_crumble.jpeg"><br><h4> APPLE CRUMBLE DESSERT </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con5" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="apple_blueberry.jpeg"><br><h4> APPLE BLUEBERRY TARTS</h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con6" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="snick_roll.jpg"><br><h4> SNICKERS ROLL </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+<br>
+<br>
+<br>
+
+<div id="con7" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="brownie_trifle.jpg"><br><h4> BROWNIE TRIFLES </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con8" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="caramel_custard.jpg"><br><h4> CARAMEL CUSTARD </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con9" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="holly_jolly_jelly.jpg"><br><h4> HOLLY JOLLY JELLY </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+
+</div>
+
+
+<div id= "drinks_category" style="display:none;">
+<div id="con1" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="chicken_barbeque.jpg"><br><h4> CHICKEN BARBEQUE PIZZA </h4>  <button class="buttons"> ADD TO CART </button></div> 
+<div id="con2" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_garlic.jpg"><br><h4> CHICKEN GARLIC PIZZA </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con3" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_grilled.jpg"><br><h4> CHICKEN GRILLED PIZZA </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<br>
+<br>
+<br>
+
+<div id="con4" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="chicken_tikka.jpg"><br><h4> CHICKEN TIKKA PIZZA </h4>  <button class="buttons"> ADD TO CART </button> </div> 
+<div id="con5" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="chicken_sausage.jpg"><br><h4> CHICKEN SAUSAGE PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con6" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_pizza.jpg"><br><h4> VEGETABLE PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+<br>
+<br>
+<br>
+
+<div id="con7" class ="content" style="display:inline-block; float:left"> <img class="pictures" src="veg_paneer_pizza.jpg"><br><h4> VEG PANEER PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con8" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_corn_pizza.jpg"><br><h4> VEG CORN PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+<div id="con9" class ="content" style="display:inline-block; float:left;"> <img class="pictures" src="veg_cheese_pizza.jpg"><br><h4> VEG CHEESE PIZZA </h4> <button class="buttons"> ADD TO CART </button>  </div> 
+
+</div>
+
+</div>
+</body>
+
+
+</html>

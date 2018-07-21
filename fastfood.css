@@ -1,0 +1,139 @@
+
+body {
+		background-color:#effd5f;
+		padding-top:0px;
+		margin:2px;
+		margin-top:0px;
+		width:100%;
+		height:auto;	
+		min-width:1000px;
+		overflow-h:hidden;
+		
+}
+
+#container {
+			
+			height:auto;
+			width:auto;
+			
+}
+#header {
+       
+	   text-align:center;
+       background-color:#fce205;
+	   height:250px;
+	   width:100%;
+	   
+	   
+	   
+	   
+}
+
+.thejunk {
+		font-size:40px;
+		line-height:0.0em;
+		padding-top:100px;
+}
+.station {
+		font-size:90px;
+		line-height:0.0em;
+}
+.span1 {
+		color:red;
+		font-style:bold;
+		font-size:80px;
+}
+.span2 {
+		text-decoration:underline;
+}
+ul {
+	
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+li{
+	float:left;
+}
+li a {
+		display:block;
+		color : white;
+		text-align:center;
+		padding :14px 16px;
+		text-decoration:none;
+		
+}	
+
+li a:hover {
+		background-color:#111;
+}
+
+#nav {
+		height:50px;
+		background-color: #333;
+        text-align:center;
+		padding-left:35%;
+}
+.pics {
+		width:800px;
+		height:400px;
+		display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 60%;
+	 border-color:white;
+	 border-radius:20px; 	
+		
+		
+}
+.pic_title {
+		text-align:center;
+		color:red;
+		font-size:30px;	
+		
+}
+
+#footer{
+	 height:300px;
+	 margin-top:30px;
+	 background-color:#333;
+
+}
+
+h2.categories {
+		display:inline;
+		color : red;
+		font-family:tiffany;
+		margin-left:30px;
+		margin-right:30px;
+}
+
+#categories {
+			height:100px;
+			padding:20px;
+			text-align:center;
+}
+
+.pictures{
+			
+			height:300px;
+			width:300px;	
+}
+#content1 {
+			height:1000px;
+			width:100%;
+			
+}
+#pizza_category {
+			width:100%;
+}
+.content {
+			background-color:white;
+			padding:5px;
+			margin-left:75px;
+			margin-right:45px;
+			text-align:center;
+			margin-bottom:45px;
+			border:2px solid black;
+}
